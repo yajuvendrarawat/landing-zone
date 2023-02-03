@@ -1,0 +1,26 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterPool
+metadata:
+  name: 'red-cluster-pool-aws-1'
+  namespace: 'red-cluster-pool'
+labels:
+  cloud: 'AWS'
+  region: 'ap-southeast-1'
+  vendor: OpenShift
+  cluster.open-cluster-management.io/clusterset: 'red-cluster-set'
+spec:
+  size: 0
+  runningCount: 0
+  skipMachinePools: false
+  baseDomain: # your domain name
+  installConfigSecretTemplateRef:
+    name: red-cluster-pool-aws-install-config-1
+  imageSetRef:
+    name: img4.11.2-x86-64-appsub
+  pullSecretRef:
+    name: red-cluster-pool-aws-pull-secret
+  platform:
+    aws:
+      credentialsSecretRef:
+        name: red-cluster-pool-aws-creds
+      region: ap-southeast-1
