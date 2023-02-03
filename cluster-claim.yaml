@@ -1,0 +1,21 @@
+apiVersion: hive.openshift.io/v1
+    kind: ClusterClaim
+    metadata:
+      name: red-cluster-1
+      namespace: red-cluster-pool
+      labels:
+    env: dev
+    postgresql: pg-1
+    spec:
+      clusterPoolName: red-cluster-pool-aws-1
+    ---
+    apiVersion: hive.openshift.io/v1
+    kind: ClusterClaim
+    metadata:
+      name: red-cluster-2
+      namespace: red-cluster-pool
+      labels:
+    env: dev
+    postgresql: pg-2
+    spec:
+      clusterPoolName: red-cluster-pool-gcp-1
