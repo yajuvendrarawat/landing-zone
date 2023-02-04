@@ -12,7 +12,7 @@ spec:
   size: 0
   runningCount: 0
   skipMachinePools: false
-  baseDomain: # your domain name
+  baseDomain: sandbox879.opentlc.com # your domain name
   installConfigSecretTemplateRef:
     name: red-cluster-pool-aws-install-config-1
   imageSetRef:
