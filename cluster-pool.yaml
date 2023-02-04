@@ -5,7 +5,7 @@ metadata:
   namespace: 'red-cluster-pool'
 labels:
   cloud: 'AWS'
-  region: 'ap-southeast-1'
+  region: 'us-east-2'
   vendor: OpenShift
   cluster.open-cluster-management.io/clusterset: 'red-cluster-set'
 spec:
@@ -16,7 +16,7 @@ spec:
   installConfigSecretTemplateRef:
     name: red-cluster-pool-aws-install-config-1
   imageSetRef:
-    name: img4.11.2-x86-64-appsub
+    name: img4.10.50-x86-64-appsub
   pullSecretRef:
     name: red-cluster-pool-aws-pull-secret
   platform:
