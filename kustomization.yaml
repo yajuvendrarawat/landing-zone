@@ -1,0 +1,5 @@
+resources:
+  - create-managed-cluster-set.yaml
+  - managed-cluster-set-binding
+  - cluster-claim.yaml
+  - cluster-pool.yaml
